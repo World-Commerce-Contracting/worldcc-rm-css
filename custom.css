@@ -66,6 +66,7 @@
 .mega-menu .article-link {
     background-color: var(--color-four-100);
     color: #fff;
+    text-decoration: none;
     border-color: var(--color-four-100);
     border-radius: var(--btn-radius);
     border-style: solid;
@@ -193,6 +194,14 @@ a.sub-nav-link[href$="/events/sponsorships.html"]::before {
 a.sub-nav-link[href$="/events/ems-event-calendar.html"]::before {
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'><path stroke='%23ccc' stroke-width='1.5' d='M2 12c0-3.77 0-5.66 1.17-6.83S6.23 4 10 4h4c3.77 0 5.66 0 6.83 1.17S22 8.23 22 12v2c0 3.77 0 5.66-1.17 6.83S17.77 22 14 22h-4c-3.77 0-5.66 0-6.83-1.17S2 17.77 2 14z'/><path stroke='%23ccc' stroke-linecap='round' stroke-width='1.5' d='M7 4V2.5M17 4V2.5M2.5 9h19'/><path fill='%23ccc' d='M18 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0'/></svg>")
         no-repeat center;
+}
+
+.contents .page-section {
+    padding-top: 0;
+}
+
+.contents .page-section + .page-section {
+    padding-top: 50px;
 }
 
 
@@ -422,6 +431,7 @@ blockquote:after {
 }
 .container > .two-column-widget .two-column-item + .two-column-item img {
     aspect-ratio: 1;
+    object-fit: cover;
 }
 
 .two-column-widget .two-column-widget h4 {
@@ -544,9 +554,16 @@ blockquote:after {
 .col-xs-6,
 .col-xs-7,
 .col-xs-8,
-.col-xs-9 {
+.col-xs-9,
+.banner-content,
+.page-title {
     padding-right: 30px;
     padding-left: 30px;
+}
+
+.page-title {
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .three-column-item .page-section {
@@ -601,6 +618,10 @@ blockquote:after {
     margin: 10px 0 0;
 }
 
+ul:not([class]):not([role=tablist]) li::marker {
+    color: var(--color-four-100);
+}
+
 .two-column-item li,
 .three-column-item li {
     position: relative;
@@ -615,6 +636,16 @@ blockquote:after {
     width: 21px;
     height: 21px;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSI+PHBhdGggZmlsbD0iIzAwQUJFQiIgZD0iTTEwLjUgMjFjLTEuNDUgMC0yLjgxLS4yNy00LjA4LS44MmExMC42NiAxMC42NiAwIDAgMS01LjYtNS42QTEwLjI0IDEwLjI0IDAgMCAxIDAgMTAuNWMwLTEuNDUuMjctMi44MS44Mi00LjA4YTEwLjYgMTAuNiAwIDAgMSA1LjYtNS42QzcuNy4yNiA5LjA1IDAgMTAuNSAwYTEwLjI4IDEwLjI4IDAgMCAxIDcuNDMgMy4wNyAxMC42IDEwLjYgMCAwIDEgMi4yNiAzLjM1Yy41NSAxLjI3LjgyIDIuNjMuODIgNC4wOEExMC41NSAxMC41NSAwIDAgMSAxMC41IDIxWm0wLTIuMDdjMS4xNiAwIDIuMjUtLjIyIDMuMjctLjY2YTguNTcgOC41NyAwIDAgMCA0LjUtNC41Yy40My0xLjAxLjY1LTIuMS42NS0zLjI3YTguMyA4LjMgMCAwIDAtMi40Ny01Ljk2IDguNjEgOC42MSAwIDAgMC0yLjY4LTEuODEgOC4xOSA4LjE5IDAgMCAwLTMuMjgtLjY2IDguNTQgOC41NCAwIDAgMC03Ljc3IDUuMTUgOC4yNCA4LjI0IDAgMCAwLS42NSAzLjI4IDguMiA4LjIgMCAwIDAgMi40NyA1Ljk2IDguNSA4LjUgMCAwIDAgNS45NSAyLjQ3Wm0tMS4xLTMuNmEuOTQuOTQgMCAwIDEtLjUxLS4xM2MtLjE1LS4wOC0uMy0uMjEtLjQ0LS4zOGwtMi40LTIuOTNhMS4xIDEuMSAwIDAgMS0uMjYtLjY4LjkuOSAwIDAgMSAuMjYtLjY0Ljg0Ljg0IDAgMCAxIC42Mi0uMjdjLjE2IDAgLjMuMDMuNDMuMS4xMi4wNi4yNS4xNy4zNy4zM2wxLjg5IDIuNCA0LjAxLTYuNDNjLjIxLS4zNS40Ny0uNTIuOC0uNTJhMSAxIDAgMCAxIC42My4yM2MuMi4xNi4yOS4zNi4yOS42MSAwIC4xMi0uMDMuMjQtLjA4LjM1LS4wNS4xMi0uMS4yMy0uMTguMzNsLTQuNTQgNy4xMWExIDEgMCAwIDEtLjkuNTJaIi8+PC9zdmc+);
+}
+
+.two-column-item li ul li:before,
+.three-column-item li ul li:before {
+    display: none;
+}
+
+.two-column-item li ul li,
+.three-column-item li ul li {
+    list-style-type: initial;
 }
 
 .bg-grey-light > .container > h2 {
@@ -652,17 +683,7 @@ ul:not([class]):not([role="tablist"]) {
 .article-image-holder {
     position: relative;
 }
+
 .mega-menu .article-image-holder::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: #fff;
-    background-color: var(--color-one-100);
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-align: right;
-    content: "Read →";
-    padding: 6px 10px;
-    z-index: 100;
+    display: none !important;
 }
