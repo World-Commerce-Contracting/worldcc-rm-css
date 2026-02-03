@@ -594,8 +594,8 @@ blockquote:after {
 .two-column-item .page-section.bg-light {
     background-color: #eee !important;
 }
-.three-column-item .page-section p,
-.two-column-item .page-section p {
+.three-column-item .page-section.bg-light p,
+.two-column-item .page-section.bg-light p {
     color: var(--color-one-100);
     margin: 0;
 }
