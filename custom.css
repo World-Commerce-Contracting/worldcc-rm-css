@@ -708,12 +708,16 @@ ul:not([class]):not([role="tablist"]) {
     display: none !important;
 }
 
-.pink_bg_button .widget-button {
-  background-color: #CC0088 !important;
-  color: white !important;
+.pink_bg_button a,
+.pink_bg_button button {
+  background-color: #e6007e !important;
+  color: #ffffff !important;
+  border: none !important;
 }
 
-.blue_bg_button .widget-button {
+.blue_bg_button a,
+.blue_bg_button button {
   background-color: #0080C9 !important;
   color: white !important;
+  border: none !important;
 }
