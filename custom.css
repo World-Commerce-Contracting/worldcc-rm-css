@@ -708,12 +708,12 @@ ul:not([class]):not([role="tablist"]) {
     display: none !important;
 }
 
-.pink_bg_button {
+.pink_bg_button .widget-button {
   background-color: #CC0088 !important;
   color: white !important;
 }
 
-.blue_bg_button {
+.blue_bg_button .widget-button {
   background-color: #0080C9 !important;
   color: white !important;
 }
