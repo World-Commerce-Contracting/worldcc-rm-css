@@ -457,10 +457,10 @@ blockquote:after {
 .two-column-item .page-section p:has(+ p) {
     margin-bottom: 10px;
 }
-.container > .two-column-widget .two-column-item + .two-column-item img {
+/*.container > .two-column-widget .two-column-item + .two-column-item img {
     aspect-ratio: 1;
     object-fit: cover;
-}
+}*/
 
 .two-column-widget .two-column-widget h4 {
     color: #999;
