@@ -362,12 +362,12 @@ h4 {
 .widget-button:has(+ .widget-button),
 .widget-button:has(+ .pink_bg_button),
 .widget-button:has(+ .blue_bg_button),
-.pink_bg_button > .widget-button :has(+ .widget-button),
-.pink_bg_button > .widget-button :has(+ .pink_bg_button),
-.pink_bg_button > .widget-button :has(+ .blue_bg_button),
-.blue_bg_button > .widget-button :has(+ .widget-button),
-.blue_bg_button > .widget-button :has(+ .pink_bg_button),
-.blue_bg_button > .widget-button :has(+ .blue_bg_button) {
+.pink_bg_button:has(+ .widget-button),
+.pink_bg_button:has(+ .pink_bg_button),
+.pink_bg_button:has(+ .blue_bg_button),
+.blue_bg_button:has(+ .widget-button),
+.blue_bg_button:has(+ .pink_bg_button),
+.blue_bg_button:has(+ .blue_bg_button) {
     float: left;
     margin-right: 20px;
 }
