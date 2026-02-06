@@ -454,7 +454,7 @@ blockquote:after {
 .two-column-item .page-section p {
     margin-bottom: 0;
 }
-.two-column-item .page-section p:has(+ p) {
+.two-column-item .page-section p:has(+ *) {
     margin-bottom: 10px;
 }
 /*.container > .two-column-widget .two-column-item + .two-column-item img {
